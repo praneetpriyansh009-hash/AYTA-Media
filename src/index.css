@@ -319,6 +319,19 @@
 }
 .animate-shimmer-border { animation: filigreeShimmer 6s ease-in-out infinite; }
 
+@keyframes marqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee-belt {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 35s linear infinite;
+}
+.animate-marquee-belt:hover {
+  animation-play-state: paused;
+}
+
 /* Scroll Reveal */
 .reveal-on-scroll {
   opacity: 0;

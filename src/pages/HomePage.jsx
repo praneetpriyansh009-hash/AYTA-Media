@@ -18,16 +18,10 @@ const pillars = [
   { num: 'III', icon: 'theater_comedy', label: 'SACRED CULTURAL ARENAS', title: 'Physical Stage Conclaves', desc: "Transforming digital discourse into physical amphitheaters. From Patna's river ghats to national auditoriums, our flagship festivals summon real youth poetry, street plays, and spoken fury.", cta: 'Enter The Conclave' },
 ]
 
-const episodes = [
-  { img: IMG1, category: 'EXISTENTIAL CRITIQUE', title: 'Why Generation Z Feels Lost in Traditional Education', desc: 'Degree inflation, rote-learning factory hubs, and the silent panic after convocation. Unpacking the collapse of the conventional employment promise.', tag: 'AYTA Flagship Series' },
-  { img: IMG2, category: 'TIER-2 RENAISSANCE', title: 'Art vs Stability in Tier-2 Indian Cities', desc: 'Can an indie filmmaker or poet thrive without relocating to Mumbai or Bengaluru? Three regional instigators lay bare their economic survival blueprints.', tag: 'Inquisition Dialogue' },
-  { img: IMG3, category: 'RECLAIMING ROOTS', title: 'Redefining Cultural Heritage Without Dogma', desc: "How India's younger generation is rediscovering classical poetry, folk mythology, and local dialects while radically shedding orthodox caste and gender constraints.", tag: 'Sovereign Monograph' },
-]
-
-const testimonials = [
-  { initials: 'AS', name: 'Ananya Shrivastava', role: 'Patna Women\'s College • Spoken Word', log: '#01 • PATNA SANCTUM', quote: '"In a city where youth are told to stay silent until they clear a government test, AYTA was the first stage that asked me: \'What is your poetry trying to cure?\'"', grad: 'from-[var(--color-gold-600)] to-amber-300' },
-  { initials: 'RV', name: 'Rohan Verma', role: 'IIT Patna • Indie Filmmaker', log: '#02 • NCR FELLOWSHIP', quote: '"The podcasts don\'t beat around the bush. When they discussed burnout among engineering aspirants in Kankarbagh, it felt like someone was reading my personal diary."', grad: 'from-amber-500 to-[var(--color-crimson-glow)]' },
-  { initials: 'TK', name: 'Tariq Khan', role: 'Rangmanch Street Theater Lead', log: '#03 • THEATER DIVISION', quote: '"Nukad Natak used to feel like a forgotten relic until AYTA revived it with raw street rhythm. AAGAAZ is going to set the Ganga banks ablaze."', grad: 'from-[var(--color-gold-500)] to-[var(--color-gold-700)]' },
+const broadcastsAndEvents = [
+  { img: IMG1, category: 'FEATURED PODCAST', title: 'Why Generation Z Feels Lost in Traditional Education', desc: 'Degree inflation, rote-learning factory hubs, and the silent panic after convocation. Unpacking the collapse of the conventional employment promise.', tag: 'Flagship Series', icon: 'podcasts' },
+  { img: IMG2, category: 'UPCOMING EVENT', title: 'AYTA Poetry Slam & Open Mic Night', desc: 'An evening of raw spoken word, unplugged music, and unfiltered dialogues. Reserve your spot to witness the local underground talent.', tag: 'Live Event', icon: 'theater_comedy' },
+  { img: IMG3, category: 'MEDIA PARTNERS', title: 'Official Media Partners at Truce MUN 2026', desc: 'AYTA Media House takes the front row in documenting the intense diplomatic debates and global policy discourse at Truce Model United Nations.', tag: 'Partnership', icon: 'handshake' },
 ]
 
 function handleNewsletter(e) {
@@ -165,45 +159,39 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ═══ FEATURED BROADCASTS ═══ */}
+        {/* ═══ FEATURED BROADCASTS & EVENTS ═══ */}
         <section className="w-full max-w-[1440px] mx-auto px-6 py-24" id="featured-episodes">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-14 reveal-on-scroll">
             <div>
-              <div className="flex items-center gap-2 text-[var(--color-gold-400)] font-[var(--font-cinzel)] text-xs tracking-[0.25em] uppercase mb-2"><span>✦</span><span>SUBVERSIVE AUDIO CHRONICLES</span></div>
-              <h2 className="font-[var(--font-display-hero)] text-3xl sm:text-5xl text-white font-bold tracking-tight">Master Tapes & Featured Broadcasts</h2>
+              <div className="flex items-center gap-2 text-[var(--color-gold-400)] font-[var(--font-cinzel)] text-xs tracking-[0.25em] uppercase mb-2"><span>✦</span><span>SUBVERSIVE AUDIO & EVENTS</span></div>
+              <h2 className="font-[var(--font-display-hero)] text-3xl sm:text-5xl text-white font-bold tracking-tight">Master Tapes & Collaborations</h2>
             </div>
             <div className="flex items-center gap-3">
-              <div className="px-4 py-2 rounded-xl bg-[var(--color-obsidian-900)] border border-[var(--color-gold-500)]/30 text-[var(--color-gold-300)] font-[var(--font-cinzel)] text-xs tracking-wider flex items-center gap-2">
-                <span className="material-symbols-outlined text-sm text-[var(--color-gold-400)]">tune</span> Curated Series
-              </div>
               <a href="#" className="px-5 py-2 rounded-xl bg-[var(--color-gold-500)]/10 hover:bg-[var(--color-gold-500)]/20 border border-[var(--color-gold-500)]/40 hover:border-[var(--color-gold-300)] text-[var(--color-gold-200)] font-[var(--font-cinzel)] text-xs tracking-wider uppercase transition-all duration-300 hover:shadow-[0_0_20px_rgba(242,177,70,0.3)]">View Entire Archive</a>
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {episodes.map((ep, i) => (
+            {broadcastsAndEvents.map((item, i) => (
               <article key={i} className="relative beveled-glass rounded-2xl overflow-hidden gilded-border flex flex-col justify-between group transition-all duration-500 shadow-2xl reveal-on-scroll hover:-translate-y-1.5">
                 <div className="relative h-64 w-full overflow-hidden">
-                  <img alt={ep.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src={ep.img} />
+                  <img alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src={item.img} />
                   <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-obsidian-950)] via-[var(--color-obsidian-950)]/40 to-transparent group-hover:via-[var(--color-obsidian-950)]/20 transition-all duration-500" />
-                  <span className="absolute top-3 left-3 px-3 py-1 rounded bg-[var(--color-obsidian-950)]/90 border border-[var(--color-gold-500)]/50 backdrop-blur-md text-[var(--color-gold-200)] font-[var(--font-cinzel)] text-[10px] tracking-wider uppercase font-semibold group-hover:border-[var(--color-gold-300)] group-hover:shadow-[0_0_12px_rgba(242,177,70,0.4)] transition-all">{ep.category}</span>
-                  <div className="absolute bottom-3 left-3"><span className="px-2.5 py-0.5 rounded bg-[var(--color-obsidian-950)]/80 border border-[var(--color-gold-500)]/20 text-[var(--color-gold-300)] font-[var(--font-cinzel)] text-[10px] tracking-widest uppercase">DISPATCH RECORD</span></div>
+                  <span className="absolute top-3 left-3 px-3 py-1 rounded bg-[var(--color-obsidian-950)]/90 border border-[var(--color-gold-500)]/50 backdrop-blur-md text-[var(--color-gold-200)] font-[var(--font-cinzel)] text-[10px] tracking-wider uppercase font-semibold group-hover:border-[var(--color-gold-300)] group-hover:shadow-[0_0_12px_rgba(242,177,70,0.4)] transition-all">{item.category}</span>
                 </div>
                 <div className="p-6 flex flex-col flex-grow justify-between">
                   <div>
-                    <h3 className="font-[var(--font-display-hero)] text-xl text-white font-bold mb-3 group-hover:text-[var(--color-gold-200)] transition-colors leading-snug">{ep.title}</h3>
-                    <p className="font-[var(--font-body-md)] text-sm text-[#a5b4c2] line-clamp-3 mb-6 font-light leading-relaxed">{ep.desc}</p>
+                    <h3 className="font-[var(--font-display-hero)] text-xl text-white font-bold mb-3 group-hover:text-[var(--color-gold-200)] transition-colors leading-snug">{item.title}</h3>
+                    <p className="font-[var(--font-body-md)] text-sm text-[#a5b4c2] line-clamp-3 mb-6 font-light leading-relaxed">{item.desc}</p>
                   </div>
                   <div className="pt-4 border-t border-[var(--color-gold-500)]/15 flex items-center justify-between">
                     <div className="flex items-center gap-2 text-[var(--color-gold-400)] text-xs font-[var(--font-cinzel)] tracking-wider uppercase">
-                      <span className="text-amber-400">✦</span><span>{ep.tag}</span>
+                      <span className="text-amber-400">✦</span><span>{item.tag}</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      {['podcasts', 'menu_book'].map(ic => (
-                        <button key={ic} className="w-9 h-9 rounded-full bg-[var(--color-obsidian-900)] border border-[var(--color-gold-500)]/40 hover:bg-[var(--color-gold-500)] hover:text-[var(--color-obsidian-950)] text-[var(--color-gold-300)] flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-md">
-                          <span className="material-symbols-outlined text-base">{ic}</span>
-                        </button>
-                      ))}
+                      <button className="w-9 h-9 rounded-full bg-[var(--color-obsidian-900)] border border-[var(--color-gold-500)]/40 hover:bg-[var(--color-gold-500)] hover:text-[var(--color-obsidian-950)] text-[var(--color-gold-300)] flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-md">
+                        <span className="material-symbols-outlined text-base">{item.icon}</span>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -265,34 +253,36 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ═══ TESTIMONIALS ═══ */}
-        <section className="w-full max-w-[1440px] mx-auto px-6 py-24 reveal-on-scroll">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <div className="flex items-center justify-center gap-2 text-[var(--color-gold-400)] font-[var(--font-cinzel)] text-xs tracking-[0.3em] uppercase mb-2"><span>✦</span><span>VOICES FROM THE SHADOWS</span><span>✦</span></div>
-            <h2 className="font-[var(--font-display-hero)] text-3xl sm:text-5xl text-white font-bold tracking-tight">The Underground Speaks</h2>
-            <p className="font-[var(--font-quote-editorial)] text-xl text-[#b8c6d3] italic mt-3 font-light">Real words from students, slam poets, playwrights, and listeners who stepped into the light with AYTA.</p>
+        {/* ═══ VIDEO CLIPS MARQUEE ═══ */}
+        <section className="w-full py-24 border-t border-[var(--color-gold-500)]/20 overflow-hidden bg-[var(--color-obsidian-950)] relative reveal-on-scroll">
+          <div className="text-center max-w-2xl mx-auto mb-12 px-6">
+            <div className="flex items-center justify-center gap-2 text-[var(--color-gold-400)] font-[var(--font-cinzel)] text-xs tracking-[0.3em] uppercase mb-2"><span>✦</span><span>THE UNDERGROUND SPEAKS</span><span>✦</span></div>
+            <h2 className="font-[var(--font-display-hero)] text-3xl sm:text-5xl text-white font-bold tracking-tight">Moments That Moved Worlds</h2>
+            <p className="font-[var(--font-quote-editorial)] text-xl text-[#b8c6d3] italic mt-3 font-light">Witness raw clips from our flagship broadcasts, open mics, and live conclaves.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((t, i) => (
-              <div key={i} className="relative beveled-glass p-8 rounded-2xl gilded-border flex flex-col justify-between shadow-2xl group transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_15px_40px_rgba(242,177,70,0.15)] reveal-on-scroll">
-                <div className="text-[var(--color-gold-500)]/10 group-hover:text-[var(--color-gold-500)]/25 transition-colors duration-500 absolute -right-2 -bottom-2 pointer-events-none">
-                  <span className="material-symbols-outlined text-8xl">format_quote</span>
+
+          {/* Marquee Belt container */}
+          <div className="relative w-full overflow-hidden flex py-4">
+            {/* Left and right fade gradients */}
+            <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-32 bg-gradient-to-r from-[var(--color-obsidian-950)] to-transparent z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-32 bg-gradient-to-l from-[var(--color-obsidian-950)] to-transparent z-10 pointer-events-none" />
+
+            <div className="animate-marquee-belt flex gap-6 px-3">
+              {/* Duplicate list twice for seamless infinite scrolling */}
+              {[...Array(2)].map((_, groupIndex) => (
+                <div key={groupIndex} className="flex gap-6">
+                  {[1, 2, 3, 4, 5].map((itemIndex) => (
+                    <div key={itemIndex} className="relative w-64 h-96 rounded-2xl overflow-hidden gilded-border group flex-shrink-0 cursor-pointer">
+                      <div className="absolute inset-0 bg-[var(--color-obsidian-900)] flex flex-col items-center justify-center border border-[var(--color-gold-500)]/20 transition-all duration-300 group-hover:border-[var(--color-gold-500)]/60">
+                        <span className="material-symbols-outlined text-4xl text-[var(--color-gold-500)]/50 group-hover:text-[var(--color-gold-300)] mb-3 transition-colors">play_circle</span>
+                        <span className="text-[var(--color-gold-400)]/60 font-[var(--font-cinzel)] text-xs tracking-widest uppercase">Video Clip {itemIndex}</span>
+                        <span className="absolute bottom-4 left-0 right-0 text-center text-[#a5b4c2] text-xs opacity-0 group-hover:opacity-100 transition-opacity">(Add Video Here)</span>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-                <div>
-                  <div className="flex items-center gap-2 text-[var(--color-gold-400)]/80 mb-5 font-[var(--font-cinzel)] text-[11px] tracking-[0.25em] uppercase">
-                    <span>ARCHIVAL LOG {t.log}</span>
-                  </div>
-                  <p className="font-[var(--font-quote-editorial)] text-xl text-[var(--color-gold-100)] italic leading-relaxed mb-6 font-light">{t.quote}</p>
-                </div>
-                <div className="flex items-center gap-3 pt-5 border-t border-[var(--color-gold-500)]/15">
-                  <div className={`w-11 h-11 rounded-full bg-gradient-to-tr ${t.grad} text-[var(--color-obsidian-950)] font-[var(--font-cinzel)] font-bold flex items-center justify-center text-sm shadow-md group-hover:scale-105 transition-transform`}>{t.initials}</div>
-                  <div>
-                    <h4 className="font-[var(--font-cinzel)] text-sm font-bold text-white tracking-wider group-hover:text-[var(--color-gold-200)] transition-colors">{t.name}</h4>
-                    <p className="text-xs text-[var(--color-gold-400)]/80 font-mono">{t.role}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </section>
 

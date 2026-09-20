@@ -36,13 +36,12 @@ export default function Header() {
         <div className="flex items-center gap-2">
           <span className="inline-block w-1.5 h-1.5 rounded-full bg-amber-400 animate-ping"></span>
           <span className="text-[var(--color-gold-200)] font-semibold tracking-[0.3em]">SOVEREIGN BROADCAST</span>
-          <span className="text-[var(--color-gold-500)]/40">•</span>
-          <span className="hidden sm:inline text-[var(--color-gold-400)]/80 tracking-widest">VOICE OF THE GENERATION • LIVE FROM BIHAR & BEYOND</span>
+          <span className="text-[var(--color-gold-500)]/40 hidden sm:inline">•</span>
+          <span className="hidden sm:inline text-[var(--color-gold-400)]/80 tracking-widest">VOICE OF THE GENERATION</span>
         </div>
         <div className="flex items-center gap-4 text-[var(--color-gold-300)]/80">
           <span className="hidden md:inline text-[10px] tracking-widest text-amber-200/90">AAGAAZ FESTIVAL 2026 AUDITIONS OPENING</span>
-          <span className="text-amber-400">✦</span>
-          <span className="font-mono text-[10px] text-[var(--color-gold-400)]">PATNA HQ</span>
+          <span className="text-amber-400 animate-pulse">✦</span>
         </div>
       </div>
 
