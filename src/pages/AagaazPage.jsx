@@ -6,7 +6,7 @@ import AmbientParticles from '../components/AmbientParticles'
 import useScrollReveal from '../hooks/useScrollReveal'
 
 const HERO_POSTER = 'https://lh3.googleusercontent.com/aida-public/AB6AXuAJHKijJOnoDukEweI4UJByX3yL-Eft0264jCGgrauTwEquvDSVwdPCDCQWZ2LbEpeIh-eb0y684WBmGwr8eFAI7Bw9rosY7fh29aFV2EQwetqDxpOz8ujK5glnzMNeZ0R1U8JX4Ku9VHLX2779L6ewqXjHjxBNLfyAic4pm48ra1sZdDAgHYkZP_7v0XsEM3v0TMrjfkr6PgmlL5424OXo0OLsLIgMXrtcj6f1rH75PeLbIZmAEePTDeRMQWmf9p-9lqM'
-const BANNER_IMG = 'https://lh3.googleusercontent.com/aida-public/AB6AXuDLCuhHL2PLl7zyjlb36l374bJLBuBoTuHN1LVlCf12EBUSlFkHeTBFT_cG9QHkU_yMBF2SgTbTp9WhxOBnl-CDspXhiAe3G252dXYoSGzHLjgZH-zFGjehX0a6liWoIrDrNvVMpUwey6Lf7AoBYf_jLI0r82gp8m4HjoeKzXdb1epGNkfHWa9P0nTHQR3mltMdfqehhjjhDZ200Drgjibm9nCgfp-M6DYcT9X8z9WhicAQLnWc-SQieWQ5i8Vw_SkLKLU'
+const BANNER_IMG = '/aagaaz-banner.jpg'
 const MIC_IMG = 'https://lh3.googleusercontent.com/aida-public/AB6AXuDYIWEmxcgMO9JLfYgkBUjp864dSHAKkNq_s6sZtWsgfcRKu1TiGM98bwqM52rLSNu8JoHrDUHtB2hYrmLema7nUk3u1YB92trIW2z1Kb9SNGz0BMzJ3_u9nNu5D8iU_htFz90QNh4edb-hcwW8guwcFkE_Js5JZuLpdsLhcYtB_opUppznEQXAEf4_e013dwVv7pJwJLvvJBB_p90EXUhIESEsMRYKX-geyn6DjGvxE7PVEwVBxGz2Qw'
 
 const STAGE_IMGS = [
@@ -16,24 +16,26 @@ const STAGE_IMGS = [
 ]
 
 const disciplines = [
-  { num: 'I', icon: 'history_edu', label: 'Poetry', hindi: '(कविता)', time: '2 – 5 Mins', type: 'Solo Stage', desc: 'Free verse, slam poetry, spoken cadence. Verses in Hindi, Urdu, Maithili, Bhojpuri, or English that dissect human realities.' },
-  { num: 'II', icon: 'favorite', label: 'Shayari', hindi: '(शायरी व नज़्म)', time: '2 – 5 Mins', type: 'Solo Stage', desc: 'Lyrical couplets, ghazals, and introspective quatrains confronting modern anguish, heritage longing, and inner truths.' },
-  { num: 'III', icon: 'theater_comedy', label: 'Role Play', hindi: '(हास्य व अभिनय)', time: '5 – 7 Mins', type: 'Solo / Duo', desc: 'Sharp social satire, nuanced solo monologues, observational comedy mirroring Indian college life and street reality.' },
-  { num: 'IV', icon: 'auto_stories', label: 'Dastangoi', hindi: '(किस्सागोई)', time: '5 – 7 Mins', type: 'Solo Act', desc: 'The ancient art of spoken chronicle. First-person lived accounts, folklore through modern lenses, and dramatic memoirs.' },
-  { num: 'V', icon: 'campaign', label: 'Nukad Natak', hindi: '(नुक्कड़ नाटक)', time: '10 – 15 Mins', type: 'Troupe Act', desc: 'Street theatre with thunderous social resonance. Resonating dholaks, rhythmic clapping, and collective awakening.', ember: true },
+  { num: 'I', icon: 'history_edu', label: 'Poetry', hindi: '(कविता)', time: '2 – 5 Mins', type: 'Solo', desc: 'Free verse, slam poetry, spoken cadence. Verses in Hindi, Urdu, Maithili, Bhojpuri, or English that dissect human realities.' },
+  { num: 'II', icon: 'favorite', label: 'Shayari', hindi: '(शायरी व नज़्म)', time: '2 – 5 Mins', type: 'Solo', desc: 'Lyrical couplets, ghazals, and introspective quatrains confronting modern anguish, heritage longing, and inner truths.' },
+  { num: 'III', icon: 'theater_comedy', label: 'Role Play', hindi: '(हास्य व अभिनय)', time: '2 – 5 Mins', type: 'Solo', desc: 'Sharp social satire, nuanced solo monologues, observational comedy mirroring Indian college life and street reality.' },
+  { num: 'IV', icon: 'auto_stories', label: 'Storytelling', hindi: '(कहानी वाचन)', time: '2 – 5 Mins', type: 'Solo', desc: 'The ancient art of spoken chronicle. First-person lived accounts, folklore through modern lenses, and dramatic memoirs.' },
+  { num: 'V', icon: 'mic', label: 'Standup Comedy', hindi: '(स्टैंड-अप कॉमेडी)', time: '2 – 5 Mins', type: 'Solo', desc: 'Raw, unfiltered humor. Anecdotal comedy exploring the quirks, struggles, and absurdities of youth and regional life.' },
+  { num: 'VI', icon: 'campaign', label: 'Nukad Natak', hindi: '(नुक्कड़ नाटक)', time: '7 – 10 Mins', type: 'School Team', desc: 'Street theatre with thunderous social resonance. Resonating dholaks, rhythmic clapping, and collective awakening.', ember: true },
 ]
 
 const faqs = [
-  { id: 'faq-1', q: 'Is there any registration fee to participate in AAGAAZ 2026?', a: 'No. In unwavering alignment with AYTA Media House\'s cultural charter to uplift grassroots regional talent, audition submissions and stage entries are 100% free of charge.' },
-  { id: 'faq-2', q: 'Can I perform in my regional mother tongue (Bhojpuri, Maithili, Magahi)?', a: 'Wholeheartedly yes. Aagaaz was founded to celebrate dialectal dignity. Pieces in Hindi, Urdu, Maithili, Bhojpuri, Angika, Magahi, and English are warmly embraced.' },
-  { id: 'faq-3', q: 'How strictly are stage time limits enforced?', a: 'Strictly. Poetry & Shayari have a 2 to 5 minute limit. Monologues & Dastangoi acts receive 5 to 7 minutes. A subtle amber stage cue lantern signals 30 seconds remaining.' },
-  { id: 'faq-4', q: 'Are live instruments or background soundscapes permitted?', a: 'Yes. Acoustic accompaniment (guitar, flute, dafli, harmonium) is permitted. For ambient digital tracks, our auditorium sound master accepts lossless audio files during rehearsal reporting.' },
+  { id: 'faq-1', q: 'Is there any registration fee to participate in AAGAAZ 2026?', a: 'Yes, a nominal talent entry fee of ₹899 is required to secure your audition slot and access to the grand stage.' },
+  { id: 'faq-2', q: 'Can I perform in my regional mother tongue?', a: 'For AAGAAZ 2026, performances are strictly limited to Hindi and English to ensure universal resonance and standardized evaluation.' },
+  { id: 'faq-3', q: 'How strictly are stage time limits enforced?', a: 'Strictly. Poetry & Shayari have a 2 to 5 minute limit. Monologues, Standup & Storytelling acts receive 5 to 7 minutes. A subtle amber stage cue lantern signals 30 seconds remaining.' },
+  { id: 'faq-4', q: 'Are live instruments or background soundscapes permitted?', a: 'No. To maintain focus on the raw, unfiltered power of your voice and words, no live instruments or background soundscapes are permitted.' },
 ]
 
 const privileges = [
   { icon: 'workspace_premium', title: 'Patna Ki Pratibha Trophy & Honors', desc: 'Formal physical memento, honorarium, and citation presented by acclaimed literary figures.' },
   { icon: 'podcasts', title: 'AYTA Podcast Spotlight', desc: 'Top three performers in each genre receive full-length conversational podcast features.' },
   { icon: 'diversity_3', title: 'Permanent Artist Collective Access', desc: 'Direct curation for commercial gigs, national college fests, and paid creative residencies.' },
+  { icon: 'social_leaderboard', title: 'Viral Spotlight & Fame', desc: 'Clips of winning performances will be heavily promoted and published across our official Instagram and YouTube channels.' },
 ]
 
 export default function AagaazPage() {
@@ -114,10 +116,10 @@ export default function AagaazPage() {
               </div>
 
               {/* Stats */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 fade-in-entry delay-500">
-                {[['5', 'Disciplines'], ['500+', 'Youth Voices'], ['₹0', 'Talent Entry Fee'], ['PATNA', 'Grand Stage']].map(([val, label], i) => (
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 fade-in-entry delay-500">
+                {[['6', 'Disciplines'], ['₹899', 'Registration Fee'], ['PATNA', 'Grand Stage']].map(([val, label], i) => (
                   <div key={i} className="p-4 rounded-xl bg-[var(--color-surface-low)]/90 border border-[var(--color-gold-leaf)]/15 backdrop-blur-md flex flex-col items-center text-center transition-all duration-300 hover:border-[var(--color-gold-leaf)]/40 hover:-translate-y-1 hover:shadow-[0_10px_25px_rgba(0,0,0,0.6)]">
-                    <span className={`font-[var(--font-cinzel)] text-3xl font-extrabold ${i === 2 ? 'text-[var(--color-accent-ember)]' : 'text-gold-gradient'}`}>{val}</span>
+                    <span className={`font-[var(--font-cinzel)] text-3xl font-extrabold ${i === 1 ? 'text-[var(--color-accent-ember)]' : 'text-gold-gradient'}`}>{val}</span>
                     <span className="font-[var(--font-cinzel)] text-[10px] text-[var(--color-muted-text)] uppercase tracking-widest mt-1">{label}</span>
                   </div>
                 ))}
@@ -163,9 +165,9 @@ export default function AagaazPage() {
           </div>
 
           {/* Banner */}
-          <div className="mt-12 rounded-2xl overflow-hidden border border-[var(--color-gold-leaf)]/25 shadow-2xl relative bg-[var(--color-surface-low)] group hover:border-[var(--color-gold-leaf)]/50 transition-all duration-500">
-            <div className="relative h-64 sm:h-80 md:h-96 w-full overflow-hidden">
-              <img alt="Aagaaz Conclave Ocean of Words Banner" className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105" src={BANNER_IMG} />
+          <div className="mt-12 rounded-2xl overflow-hidden border border-[var(--color-gold-leaf)]/25 shadow-2xl relative bg-[var(--color-noir)] group hover:border-[var(--color-gold-leaf)]/50 transition-all duration-500">
+            <div className="relative w-full overflow-hidden">
+              <img alt="Aagaaz Conclave Ocean of Words Banner" className="w-full h-auto block transition-transform duration-1000 ease-out group-hover:scale-105" src={BANNER_IMG} />
               <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-noir)] via-[var(--color-noir)]/40 to-transparent" />
               <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-noir)] via-transparent to-transparent" />
               <div className="absolute bottom-6 left-6 sm:bottom-10 sm:left-10 max-w-xl transition-transform duration-500 group-hover:translate-x-1">
@@ -191,7 +193,7 @@ export default function AagaazPage() {
               <h2 className="font-[var(--font-cinzel)] text-3xl sm:text-5xl font-bold text-[var(--color-gold-light)] uppercase tracking-wide">Five Stages. Countless Truths.</h2>
               <p className="font-[var(--font-body-md)] text-sm sm:text-base text-[var(--color-muted-text)] mt-3">Every category is evaluated by celebrated mentors with unfiltered feedback, cinematic spotlight cuts, and official studio releases.</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {disciplines.map(d => (
                 <div key={d.num} className="gold-card-sheen rounded-2xl p-6 flex flex-col justify-between relative group cursor-pointer">
                   <div className="ornate-corner ornate-corner-tl" /><div className="ornate-corner ornate-corner-tr" />
@@ -223,48 +225,6 @@ export default function AagaazPage() {
           </div>
         </section>
 
-        {/* ═══ ARCHIVAL STAGE ═══ */}
-        <section className="relative w-full py-20" id="showcase">
-          <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-8">
-            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-12">
-              <div className="flex flex-col">
-                <div className="flex items-center gap-2 text-[var(--color-accent-ember)]">
-                  <span className="font-[var(--font-cinzel)] text-xs uppercase tracking-[0.25em] font-bold">Archival Recordings</span>
-                </div>
-                <h2 className="font-[var(--font-cinzel)] text-3xl sm:text-4xl font-bold text-[var(--color-gold-light)] uppercase">Glimpses from the Stage</h2>
-              </div>
-              <a href="#" className="px-5 py-2 rounded-full border border-[var(--color-gold-leaf)]/30 text-[var(--color-gold-leaf)] hover:bg-[var(--color-gold-leaf)]/10 font-[var(--font-cinzel)] text-xs tracking-wider uppercase flex items-center gap-2 transition-all duration-300 hover:border-[var(--color-gold-leaf)] transform hover:scale-105">
-                <span>Explore YouTube Archive</span><span className="material-symbols-outlined text-sm">open_in_new</span>
-              </a>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {[
-                { label: 'Patna Slam 2025', cat: 'Spoken Word • 85k Views', title: 'Kavitaon Mein Zinda Bihar', desc: 'An electric performance capturing youth migration, nostalgia for the Ganga Ghats, and resilient ambition.', by: 'Aman Sinha' },
-                { label: 'Winner Troupe 2025', cat: 'Street Theatre Gold', title: 'Kyu Chup Hai Tu?', desc: 'A hard-hitting theatrical intervention on women safety and everyday heroism across suburban transit stops.', by: 'Patna University Troupe' },
-                { label: 'Featured Podcast', cat: 'Dastangoi • Podcast Special', title: 'Dastan-e-Magadh', desc: 'Ancient legends revived with contemporary rhythm and evocative soundscapes recorded live at AYTA Studio.', by: 'Narrated by Zoya Khan' },
-              ].map((s, i) => (
-                <div key={i} className="gold-card-sheen rounded-2xl overflow-hidden shadow-2xl flex flex-col group cursor-pointer">
-                  <div className="relative h-64 w-full overflow-hidden">
-                    <img alt={s.title} className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src={STAGE_IMGS[i]} />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-noir)] via-transparent to-transparent" />
-                    <span className="absolute top-3 left-3 px-2.5 py-0.5 rounded-full bg-[var(--color-noir)]/80 border border-[var(--color-gold-leaf)]/30 text-[var(--color-gold-leaf)] font-[var(--font-cinzel)] text-[10px] uppercase tracking-wider backdrop-blur-sm">{s.label}</span>
-                  </div>
-                  <div className="p-5 flex flex-col gap-1.5 flex-1 justify-between">
-                    <div>
-                      <span className="font-[var(--font-cinzel)] text-[10px] text-[var(--color-accent-ember)] uppercase tracking-widest font-semibold">{s.cat}</span>
-                      <h4 className="font-[var(--font-display-hero)] text-xl font-bold text-[var(--color-gold-light)] group-hover:text-gold-gradient transition-colors duration-300 mt-0.5">{s.title}</h4>
-                      <p className="font-[var(--font-body-md)] text-xs text-[var(--color-muted-text)] mt-1.5 line-clamp-2">{s.desc}</p>
-                    </div>
-                    <div className="pt-3 mt-3 border-t border-[var(--color-gold-leaf)]/15 flex items-center justify-between text-xs text-[var(--color-gold-leaf)] font-[var(--font-cinzel)]">
-                      <span>{s.by}</span>
-                      <span className="material-symbols-outlined text-sm play-icon-pulse transition-transform duration-300 group-hover:scale-125">play_circle</span>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* ═══ REGISTRATION ═══ */}
         <section className="relative w-full py-20 bg-[var(--color-surface-low)]/80 border-t border-[var(--color-gold-leaf)]/15" id="register">
@@ -365,20 +325,17 @@ export default function AagaazPage() {
                             <option value="" disabled>Choose discipline</option>
                             <option value="poetry">Poetry (Kavita) [2 - 5 Mins]</option>
                             <option value="shayari">Shayari / Nazm [2 - 5 Mins]</option>
-                            <option value="comedy">Stand-Up / Role Play [5 - 7 Mins]</option>
-                            <option value="storytelling">Storytelling (Dastangoi) [5 - 7 Mins]</option>
-                            <option value="nukad">Nukad Natak [10 - 15 Mins]</option>
+                            <option value="roleplay">Role Play [2 - 5 Mins]</option>
+                            <option value="storytelling">Storytelling [2 - 5 Mins]</option>
+                            <option value="comedy">Standup Comedy [2 - 5 Mins]</option>
+                            <option value="nukad">Nukad Natak [7 - 10 Mins]</option>
                           </select>
                         </div>
                         <div className="flex flex-col gap-1.5">
                           <label className="font-[var(--font-cinzel)] text-[11px] uppercase tracking-wider text-[var(--color-gold-light)] font-semibold">Language *</label>
                           <select className="gold-input-glow w-full bg-[var(--color-surface-card)] border border-[var(--color-gold-leaf)]/25 px-4 py-2.5 rounded-xl text-[var(--color-on-noir)] font-[var(--font-body-md)] text-sm focus:outline-none cursor-pointer">
                             <option value="hindi">Hindi</option>
-                            <option value="urdu">Urdu</option>
-                            <option value="bhojpuri">Bhojpuri</option>
-                            <option value="maithili">Maithili</option>
                             <option value="english">English</option>
-                            <option value="multilingual">Bilingual / Dialectal Blend</option>
                           </select>
                         </div>
                       </div>

@@ -256,9 +256,9 @@ export default function HomePage() {
         {/* ═══ VIDEO CLIPS MARQUEE ═══ */}
         <section className="w-full py-24 border-t border-[var(--color-gold-500)]/20 overflow-hidden bg-[var(--color-obsidian-950)] relative reveal-on-scroll">
           <div className="text-center max-w-2xl mx-auto mb-12 px-6">
-            <div className="flex items-center justify-center gap-2 text-[var(--color-gold-400)] font-[var(--font-cinzel)] text-xs tracking-[0.3em] uppercase mb-2"><span>✦</span><span>THE UNDERGROUND SPEAKS</span><span>✦</span></div>
-            <h2 className="font-[var(--font-display-hero)] text-3xl sm:text-5xl text-white font-bold tracking-tight">Moments That Moved Worlds</h2>
-            <p className="font-[var(--font-quote-editorial)] text-xl text-[#b8c6d3] italic mt-3 font-light">Witness raw clips from our flagship broadcasts, open mics, and live conclaves.</p>
+            <div className="flex items-center justify-center gap-2 text-[var(--color-gold-400)] font-[var(--font-cinzel)] text-xs tracking-[0.3em] uppercase mb-4"><span>✦</span><span>THE UNDERGROUND SPEAKS</span><span>✦</span></div>
+            <h2 className="font-[var(--font-cinzel)] text-3xl sm:text-5xl text-white font-bold tracking-widest uppercase drop-shadow-lg leading-tight">Moments That<br/>Moved Worlds</h2>
+            <p className="font-[var(--font-body-md)] text-lg sm:text-xl text-[var(--color-gold-200)]/80 mt-6 font-light max-w-lg mx-auto leading-relaxed">Witness raw clips from our flagship broadcasts, open mics, and live conclaves.</p>
           </div>
 
           {/* Marquee Belt container */}
